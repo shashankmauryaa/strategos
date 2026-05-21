@@ -32,8 +32,6 @@ export function Landing() {
             <span className="text-lg font-bold tracking-tight">STRATEGOS</span>
           </div>
           <div className="flex items-center gap-6">
-            <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Features</a>
-            <a href="#stats" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Intelligence</a>
             <Link
               to="/dashboard"
               className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
