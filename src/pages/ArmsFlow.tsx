@@ -90,7 +90,7 @@ export function ArmsFlow() {
                 <YAxis type="category" dataKey="country" stroke="#525252" fontSize={11} tickLine={false} axisLine={false} width={100} />
                 <Tooltip
                   contentStyle={{ background: '#1a1b23', border: '1px solid #2e303a', borderRadius: '8px', fontSize: '12px' }}
-                  formatter={(value: number) => [`${value}%`, 'Market Share']}
+                  formatter={(value: any) => [`${Number(value || 0)}%`, 'Market Share']}
                 />
                 <Bar dataKey="share" radius={[0, 4, 4, 0]} barSize={18}>
                   {supplierRankings.map((_, i) => (

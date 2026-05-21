@@ -7,7 +7,7 @@ import { conflictEvents, conflictSummary } from '@/data/conflicts'
 import { supplierRankings, expenditureTrend } from '@/data/arms'
 import { alerts } from '@/data/alerts'
 import { nuclearStates } from '@/data/alerts'
-import { formatNumber, formatCurrency } from '@/lib/utils'
+import { formatNumber } from '@/lib/utils'
 import { Link } from 'react-router-dom'
 
 const COLORS = ['#22c55e', '#3b82f6', '#eab308', '#ef4444', '#8b5cf6', '#f97316', '#06b6d4', '#ec4899', '#14b8a6', '#f59e0b']
@@ -102,7 +102,7 @@ export function Dashboard() {
                 <Tooltip
                   contentStyle={{ background: '#1a1b23', border: '1px solid #2e303a', borderRadius: '8px', fontSize: '12px' }}
                   labelStyle={{ color: '#fff' }}
-                  formatter={(value: number) => [`$${formatNumber(value * 1000000)}`, '']}
+                  formatter={(value: any) => [`$${formatNumber(Number(value || 0) * 1000000)}`, '']}
                 />
                 <Area type="monotone" dataKey="global" stroke="#22c55e" fill="url(#colorGlobal)" strokeWidth={2} name="Global" />
                 <Area type="monotone" dataKey="nato" stroke="#3b82f6" fill="url(#colorNato)" strokeWidth={2} name="NATO" />
@@ -197,7 +197,7 @@ export function Dashboard() {
                 </Pie>
                 <Tooltip
                   contentStyle={{ background: '#1a1b23', border: '1px solid #2e303a', borderRadius: '8px', fontSize: '12px' }}
-                  formatter={(value: number) => [`${value}%`, 'Share']}
+                  formatter={(value: any) => [`${Number(value || 0)}%`, 'Share']}
                 />
               </PieChart>
             </ResponsiveContainer>
@@ -237,7 +237,7 @@ export function Dashboard() {
                 <YAxis type="category" dataKey="name" stroke="#525252" fontSize={11} tickLine={false} axisLine={false} width={65} />
                 <Tooltip
                   contentStyle={{ background: '#1a1b23', border: '1px solid #2e303a', borderRadius: '8px', fontSize: '12px' }}
-                  formatter={(value: number) => [`${formatNumber(value * 1000)} personnel`, '']}
+                  formatter={(value: any) => [`${formatNumber(Number(value || 0) * 1000)} personnel`, '']}
                 />
                 <Bar dataKey="value" fill="#22c55e" radius={[0, 4, 4, 0]} barSize={16} />
               </BarChart>

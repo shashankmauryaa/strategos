@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { AppLayout } from '@/layouts/AppLayout'
 import { Landing } from '@/pages/Landing'
 import { Dashboard } from '@/pages/Dashboard'
@@ -19,7 +19,7 @@ import { KnowledgeGraph } from '@/pages/KnowledgeGraph'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route element={<AppLayout />}>
@@ -41,7 +41,7 @@ function App() {
           <Route path="/graph" element={<KnowledgeGraph />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
