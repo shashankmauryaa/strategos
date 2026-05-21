@@ -1,73 +1,99 @@
-# React + TypeScript + Vite
+# Strategos - Geopolitical Simulation Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive web-based geopolitical simulation and analysis platform built with React, TypeScript, and modern web technologies.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Interactive Dashboard** - Real-time overview of global geopolitical events and metrics
+- **Conflict Mapping** - Visual representation of ongoing conflicts worldwide using Leaflet maps
+- **Country Analysis** - Detailed profiles and statistics for countries across the globe
+- **Arms Flow Tracking** - Monitor weapons transfers and military aid between nations
+- **AI Console** - AI-powered analysis and insights for geopolitical scenarios
+- **Simulation Engine** - What-if scenario modeling and outcome prediction
+- **Nuclear Monitoring** - Track nuclear capabilities and proliferation indicators
+- **Alliance Networks** - Visualize and analyze international alliances and partnerships
+- **OSINT Dashboard** - Open-source intelligence gathering and analysis tools
+- **Alert System** - Real-time notifications for critical geopolitical events
+- **Arms Race Analytics** - Track military spending and arms competition metrics
+- **Knowledge Graph** - Relationship mapping between entities, events, and locations
+- **Advanced Search** - Full-text search across all data sources
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Framework**: React 19 with TypeScript
+- **Build Tool**: Vite
+- **Routing**: React Router DOM
+- **State Management**: Zustand
+- **Data Fetching**: TanStack React Query
+- **UI Components**: Radix UI primitives
+- **Styling**: Tailwind CSS v4
+- **Maps**: Leaflet & React Leaflet
+- **Charts**: Recharts
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: GitHub Pages
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Install dependencies
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Start development server
+npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Run linter
+npm run lint
 ```
+
+## Deployment
+
+The project is configured for deployment to GitHub Pages:
+
+```bash
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+## Project Structure
+
+```
+src/
+├── components/     # Reusable UI components
+├── layouts/       # Layout components (AppLayout, Sidebar, TopBar)
+├── pages/         # Page components for each route
+├── data/          # Static data files (alerts, arms, conflicts)
+├── store/         # Zustand state management
+├── types/         # TypeScript type definitions
+├── lib/           # Utility functions and configurations
+└── assets/        # Static assets (images, icons)
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server with hot module replacement
+- `npm run build` - Build production bundle with TypeScript compilation
+- `npm run lint` - Run ESLint for code quality checks
+- `npm run preview` - Preview production build locally
+- `npm run deploy` - Deploy to GitHub Pages
+
+## Browser Support
+
+Modern browsers supporting ES6+ features:
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+
+## License
+
+Private project - All rights reserved
